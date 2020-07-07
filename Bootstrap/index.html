@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap 4 網頁練習範例 - HTML5,CSS3,Bootstrap,jQuery網頁設計基礎班</title>
+    <link rel="icon shortcut" href="./img/favicon.ico">
+    <!-- 連結Bootstrap.css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- TODO: 客製化Bootstrap CSS -->
+    <!-- 使用font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- 使用style.css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 連結Bootstrap所需要的js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous">
+    </script>
+    <!-- TODO: 更新為完整的jQuery -->
+    <!-- TODO: 使用 Wow.js 製作滾動動畫 -->
+    <!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <!-- main js -->
+    <script src="./main/main.js"></script>
+
+</head>
+
+<body>
+    <!-- navbar 
+        -->
+    <!-- 使用Boostrap Navbar -->
+    <!-- TODO: 設定Navbar緊貼畫面上緣 -->
+    <!-- 點擊滾動目標 -->
+    <!-- b4-navbar-default -->
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark navbar-light bg-secondary">
+        <a class="navbar-brand" href="#">Suyun</a>
+        <!-- 手持裝置的導覽按鈕 -->
+        <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- 導覽按鈕的圖示 -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#introSection">Intro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#featuresSection">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reviewsSection">Reviews</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- header -->
+    <!-- 為以下文字加上Bootstrap Jumbotron -->
+    <!-- 為Jumbotron加入背景圖被設定文字為白色 -->
+    <header id="header" class="jumbotron">
+        <div class="container text-white text-center">
+            <h1>Building something remarkable</h1>
+            <p>We focus on providing the project management &amp; data storage solutions.</p>
+        </div>
+    </header>
+    <!-- header end -->
+    <!-- introSection -->
+    <!-- 設定introSection 上下padding為5倍 -->
+    <section id="introSection" class="py-5">
+        <!-- 設定以下h1 margin-bottom為5倍 -->
+        <h1 class="section-title text-center text-secondary mb-5">Intro</h1>
+        <div class="container">
+            <!-- 修正排版為三項排一排 並置中文字 -->
+            <!-- .row>.col -->
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <!-- icon使用primary配色，並且設定3倍上下padding -->
+                    <div class="icon text-primary py-3">
+                        <i class="fas fa-paper-plane fa-5x" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-secondary">Fast Deploy</h3>
+                    <p>We'll deploy our service with shortest time.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="icon text-primary py-3">
+                        <i class="fas fa-briefcase fa-5x" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-secondary">Stable</h3>
+                    <p>Everythings is setup ready, just waiting for your order.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="icon text-primary py-3">
+                        <i class="fas fa-gem fa-5x" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-secondary">Persistence</h3>
+                    <p>Our software &amp; hardware service is always standby.</p>
+                </div>
+            </div>
+            <!-- 設定此區塊距離上方5倍margin -->
+            <!-- 修正排版在電腦螢幕(md)時六個排一排 平板(sm)三個排一排 手機兩個排一排-->
+            <div class="row mt-5">
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-tree fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">Cozy Office</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-coffee fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">Free coffee bar</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-id-card fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">Profesional Team</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-language fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">Linguist</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-rocket fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">Hackers Spirit</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-graduation-cap fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">Self-Learning</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- introSection end -->
+    <!-- featuresSection -->
+    <section id="featuresSection" class="py-5 bg-secondary text-white">
+        <div class="container">
+            <h1 class="section-title mb-5 text-center">Features</h1>
+            <!-- 設定此區內文字 寬度為8格網格 但是必須置中 -->
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <!-- 為article1 article2 設置collapse互動方式 -->
+                    <button data-toggle="collapse" data-target="#article1" class="btn btn-primary">Team</button>
+                    <button data-toggle="collapse" data-target="#article2" class="btn btn-primary">Location</button>
+                    <article class="my-3 collapse show" id="article1">
+                        <h3>Team</h3>
+                        <p>Our team members started with only 10 people. We're Website developer, Security engineer,
+                            Graphic
+                            Designer, Information Architect , But before the company scaled up, we're all wears more
+                            than
+                            one hat. We provide different kinds of
+                            <strong>Project management, Security and Data Storage solution package</strong> for our
+                            customers </p>
+                    </article>
+                    <article class="my-3 collapse" id="article2">
+                        <h3>Location</h3>
+                        <p>We're based in Taipei Taiwan. There are several international branch offices in Hong Kong,
+                            New York,
+                            Albuquerque, Dublin and GuangDong. You could contact the nearest office for you, or if
+                            you're
+                            interested to work with us. please follow our recruit news</p>
+                    </article>
+                    <!-- TODO: 加入導覽按鈕 -->
+                    <nav class="nav nav-pills justify-conten-center">
+                        <a data-toggle="tab" class="nav-link active" href="article3">Environment</a>
+                        <a data-toggle="tab" class="nav-link active" href="article3">Philosophy</a>
+                    </nav>
+
+                    <!-- TODO: 為article3 article4 設置tab互動方式 -->
+                    <div class="tab-content">
+                        <article id="article3" class="tab-pane active">
+                            <h3>Environment</h3>
+                            <p>We have a cozy office environment not just create casual atmosphere for daily working
+                                time,
+                                but also
+                                encourage our employee stay for the internal self-learning project hosted by our HR and
+                                Software
+                                teams. It’s fun to learn challenging new things. We provide lots of courses in the topic
+                                of
+                                <strong>Languages learning, Software skill and Negotiation skill trainings.</strong>
+                                Check
+                                out more details
+                            </p>
+                        </article>
+                        <article id="article4" class="my-3">
+                            <h3>Philosophy</h3>
+                            <p>We always keep our bussiness and products simple. So it will always be easy to learn and
+                                use.
+                                Our
+                                goal is making it simple but effective. Even though it might be the first time to use
+                                that
+                                kinds
+                                of product, we'll try to make sure every steps will be clear to understand for you. If
+                                needs
+                                any helps, our technical support team will be always standing by.
+                            </p>
+                        </article>
+                    </div>
+                    <!-- 崁入一個youtube影片 https://www.youtube.com/watch?v=gwDoRPcPxtc -->
+                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/gwDoRPcPxtc" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- featuresSection end -->
+    <!-- reviewsSection -->
+    <section id="reviewsSection" class="py-5">
+        <!-- TODO: 使用輪播(Carousel)元件放入以下兩頁內容 -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <!-- 第一頁 內容 -->
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center py-5 ">
+                        <div class="col-sm-2">
+                            <!-- TODO: 設定使用者照片變圓型 -->
+                            <img src="img/reviewer-1.jpg" alt="" class="rounded-circle">
+                        </div>
+                        <div class="col-sm-6 ">
+                            <h3 class="title">Food and beverage manager</h3>
+                            <h4 class="name">Robert A. Welch</h4>
+                            <p>It's definitely the best time saving tools we have purchased in the very long time. It's
+                                awesome,
+                                really.
+                                I can't say enough about how well it's tailored to the needs of their product solutions.
+                                Our team
+                                has
+                                been using tools developed by other companies for 5 years before I choose this one, I
+                                will said it
+                                better
+                                than the others.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第一頁 內容 結束 -->
+                <!-- 第二頁 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center py-5">
+                        <div class="col-sm-2 ">
+                            <!-- TODO: 設定使用者照片變圓型 -->
+
+                            <img src="img/reviewer-2.jpg" alt="" class="rounded-circle">
+                        </div>
+                        <div class="col-sm-6">
+                            <h3 class="title">Environmental scientist</h3>
+                            <h4 class="name">Lorraine J. Rollins</h4>
+                            <p>On an everyday basis, They have helps me a lot with the accounting problem with the new
+                                release
+                                company management
+                                software, and we definitely saved lots of money from the software their provides. The
+                                training of
+                                using
+                                this software is so simple. it's so easy to use.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chavron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chavron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- 第二頁 結束 -->
+    </section>
+    <!-- reviewsSection end -->
+    <!-- startNowSection -->
+    <section id="startNowSection" class="bg-secondary py-5">
+        <div class="row justify-content-center my-5">
+            <div class="col-md-3">
+                <h4 class="text-center text-white mb-4">New Version Released!</h4>
+                <!-- TODO: 設定點擊按鈕後顯示彈出式視窗 -->
+                <button data-toggle="modal" data-target="#modal1" class="btn btn-lg btn-block btn-primary">Start
+                    Now</button>
+            </div>
+        </div>
+    </section>
+    <!-- TODO: 加入彈出式視窗 Modal -->
+    <!-- TODO: 於彈出式視窗內插入Bootstrap input表單 -->
+    <div class="modle-fade" id="modeId" tabindex="-1">
+        <div class="modle-content">
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- startNowSection end -->
+    <!-- gallerySection -->
+    <section id="gallerySection">
+        <!-- 設定此區塊為四個一排並加入hover特效 -->
+        <div class="row">
+            <div class="col-md-3 col-sm-6" id="galleryImage1">
+                <div class="galleryText">Photo1</div>
+            </div>
+            <div class="col-md-3 col-sm-6" id="galleryImage2">
+                <div class="galleryText">Photo2</div>
+            </div>
+            <div class="col-md-3 col-sm-6" id="galleryImage3">
+                <div class="galleryText">Photo3</div>
+            </div>
+            <div class="col-md-3 col-sm-6" id="galleryImage4">
+                <div class="galleryText">Photo4</div>
+            </div>
+            <div class="col-md-3 col-sm-6" id="galleryImage5">
+                <div class="galleryText">Photo5</div>
+            </div>
+            <div class="col-md-3 col-sm-6" id="galleryImage6">
+                <div class="galleryText">Photo6</div>
+            </div>
+            <div class="col-md-3 col-sm-6" id="galleryImage7">
+                <div class="galleryText">Photo7</div>
+            </div>
+            <div class="col-md-3 col-sm-6" id="galleryImage8">
+                <div class="galleryText">Photo8</div>
+            </div>
+        </div>
+    </section>
+    <!-- gallerySection end -->
+    <!-- TODO: 放入google map -->
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.1821010254766!2d120.20098107674451!3d22.99628050463349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76618b8e473f%3A0x20a3af429da352a4!2z5Y-M55Sf57ag6LGG5rKZ54mb5aW2IFNodcOgbnPDqm4gYmV2ZXJhZ2Vz!5e0!3m2!1szh-TW!2stw!4v1592464792777!5m2!1szh-TW!2stw"
+        width="2000" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+
+    <div id="map"></div>
+    <!-- map end -->
+    <!-- footer -->
+    <!-- footer -->
+    <!-- 設定底色為secondary文字為白色 -->
+    <footer id="footer" class="pt-5 bg-secondary text-white">
+        <!-- TODO: 設定以下四塊FooterList在電腦螢幕開啟時排成一個橫排 -->
+        <div class="row">
+            <div class=" footer-list1 ">
+                <h4>Contact Us</h4>
+                <a href="mailto:service@brand.com">service@brand.com</a>
+            </div>
+            <div class="footer-list2 ">
+                <h5 class="text-uppercase">Company</h5>
+                <ul>
+                    <li>
+                        <a href="#">Careers</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Press</a>
+                    </li>
+                    <li>
+                        <a href="#">Bonus</a>
+                    </li>
+                </ul>
+            </div>
+            <div class=" footer-list3">
+                <h5 class="text-uppercase">Product</h5>
+                <ul>
+                    <li>
+                        <a href="#">Enterprice</a>
+                    </li>
+                    <li>
+                        <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#">Security</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-list4 ">
+                <h5 class="text-uppercase">Resource</h5>
+                <ul>
+                    <li>
+                        <a href="#">Guilde</a>
+                    </li>
+                    <li>
+                        <a href="#">Help Center</a>
+                    </li>
+                    <li>
+                        <a href="#">API</a>
+                    </li>
+                    <li>
+                        <a href="#">Events</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-end bg-dark mt-5 py-2">
+            <p class="text-center">&copy; Copy right 2017</p>
+        </div>
+    </footer>
+    <!-- TODO: 設定置底返回按鈕 返回按鈕滾動動畫 -->
+    <button id="goBackBtn" href="#header" class="bg-primary">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- jquery.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- popper.min.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <!-- bootstrap.min.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <!-- 連結網頁主程式 -->
+    <!-- <script src="./js/main.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+</body>
+
+</html>
